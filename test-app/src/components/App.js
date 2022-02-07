@@ -4,6 +4,7 @@ import axios from "axios";
 import CustomerList from "./CustomerList";
 import Loader from "./Loader";
 import "./app.css";
+import Header from "../common/Header";
 
 export default class App extends Component{
     state ={
@@ -25,7 +26,7 @@ export default class App extends Component{
     };
     deleteCustomer = async(id)=>{
         this.setState({ loader: true });
-        const customers =  await axios.delete(`${this.state.url}/${id}`).catch(e => {
+        await axios.delete(`${this.state.url}/${id}`).catch(e => {
         // console.log(e.message);
         alert(e.response.status === 404 ? "Customer not found" : "");
         });
@@ -92,14 +93,7 @@ export default class App extends Component{
     render(){
         return (
             <div>
-                <div className="ui fixed inverted menu">
-                    <div className="ui container">
-                        <a href="/#" className="header item">
-                            React Js CRUD With Laravel Api
-                        </a>
-                    </div>
-                </div>
-               
+                <Header />
                 <div className="ui main container">
                     <MyForm customer={this.state.customer} onFormSubmit={this.onFormSubmit} />
                     {this.state.loader ? <Loader /> : " "}

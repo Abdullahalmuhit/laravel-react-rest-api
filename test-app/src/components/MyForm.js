@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Customer from './Customer';
 
 export default class MyForm extends Component{
     state = {
