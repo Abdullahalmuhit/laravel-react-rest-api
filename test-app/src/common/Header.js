@@ -11,9 +11,9 @@ export default class Header extends Component{
             <Router>
                 <div>
                    <Nav />
-                    <Switch>
+                    {/* <Switch>
                        <Route exact path="/" element={<Home/>}/>
-                    </Switch>
+                    </Switch> */}
 
                 </div>
             </Router>
