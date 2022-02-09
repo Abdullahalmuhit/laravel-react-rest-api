@@ -1,4 +1,7 @@
 import React, {Component} from "react";
+import { Link } from "react-router-dom";
+import "../components/app.css";
+
 
 export default class Header extends Component{
     
@@ -6,25 +9,29 @@ export default class Header extends Component{
         return(
 
             <div className="ui fixed inverted menu">
-                <ul class="nav ui container" >
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                <ul className="nav ui container" >
+                    <li className="nav-item">
+                        <a className="nav-link active" aria-current="page" href="#">Active</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">Link</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">Register</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Login</a>
+                    <li className="nav-item">
+                        <Link to={'/login'} className="nav-link" >Login</Link>
                     </li>
                 </ul>
-                {/* <div className="ui container">
-                    <a href="/#" className="header item">
-                        React Js CRUD With Laravel Api By Abdullah Al Muhid
-                    </a>
-                </div> */}
+                
+
+                <div className="aith-wrapper">
+                    <div className="auth-inner bcColor">
+                        <h1>You Are Login</h1>
+
+                    </div>
+
+                </div>
             </div>
             
         );

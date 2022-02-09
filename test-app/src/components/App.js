@@ -5,7 +5,6 @@ import CustomerList from "./CustomerList";
 import Loader from "./Loader";
 import "./app.css";
 import Header from "../common/Header";
-
 export default class App extends Component{
     state ={
         customers: [],
